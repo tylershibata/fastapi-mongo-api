@@ -22,7 +22,7 @@ DB_NAME = "sample_mflix"  # Change to your actual database name
 # Connect to MongoDB
 import certifi
 
-client = MongoClient(MONGO_URI, tls=True, tlsAllowInvalidCertificates-True)
+client = MongoClient(MONGO_URI, tls=True, tlsAllowInvalidCertificates=True)
 db = client[DB_NAME]
 movies_collection = db["movies"]  # Example collection
 
