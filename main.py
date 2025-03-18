@@ -4,6 +4,7 @@ API_KEY_NAME = "Mongo-DB-Example"
 from fastapi import Security, HTTPException, Header
 
 def get_api_key(x_api_key: str = Header(None)):
+	print(f"Received API Key: {x_api_key}") # Debugging line
 	if x_api_key != API_KEY:
 		raise HTTPException(status_code=401, detail="Invalid API Key")
 	return x_api_key
