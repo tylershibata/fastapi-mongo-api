@@ -20,7 +20,9 @@ MONGO_URI = "mongodb+srv://tyler:Dtshr82VxF0U8drN@cluster0.iiclk.mongodb.net/?re
 DB_NAME = "sample_mflix"  # Change to your actual database name
 
 # Connect to MongoDB
-client = MongoClient(MONGO_URI)
+import certifi
+
+client = MongoClient(MONGO_URI, tls=True, tlsCAFile=certifi.where())
 db = client[DB_NAME]
 movies_collection = db["movies"]  # Example collection
 
