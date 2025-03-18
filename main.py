@@ -16,7 +16,7 @@ from typing import List
 app = FastAPI()
 
 # MongoDB connection details
-MONGO_URI = "mongodb+srv://tyler:Dtshr82VxF0U8drN@cluster0.iiclk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_URI = "mongodb+srv://tyler:Dtshr82VxF0U8drN@cluster0.iiclk.mongodb.net/?retryWrites=true&w=majority&ssl=true&tlsAllowInvalidCertificates=true&appName=Cluster0"
 DB_NAME = "sample_mflix"  # Change to your actual database name
 
 # Connect to MongoDB
